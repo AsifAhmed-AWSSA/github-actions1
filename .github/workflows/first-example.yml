@@ -6,8 +6,9 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@main
-            
+            - name: checkout repo
+              uses: actions/checkout@main
+
             - name: Welcome Message
               run: echo "My frist github actions job"
 
