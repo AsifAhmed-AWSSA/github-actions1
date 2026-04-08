@@ -10,10 +10,16 @@ jobs:
               uses: actions/checkout@main
 
             - name: Welcome Message
-              run: echo "My frist github actions job"
+              run: |
+                echo "My frist github actions job"
+                ls -ltra
+                cat README.md
 
-            - name: List Files
-              run: ls
+            - name: Generate ASCII Artwork
+              run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
 
-            - name: Read file
-              run: cat README.md
+            # - name: List Files
+            #   run: ls
+
+            # - name: Read file
+            #   run: cat README.md
